@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍲Kitchen Map</h1>
+    <p>Search and discover new recipes</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Type a dish name... e.g. chicken, pasta, cake">
+  </div>
+
+  <div id="loading" class="loading"></div>
+  <div class="recipes" id="recipeList"></div>
+
+  <!-- Favorites -->
+  <section id="favorites">
+    <div class="favorites-header">
+      <h2>❤️ Your Favorite Recipes</h2>
+      <button class="clear-btn" onclick="clearFavorites()">🗑 Clear All Favorites</button>
+    </div>
+    <div class="recipes" id="favoriteList"></div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
