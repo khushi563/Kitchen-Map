@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kitchen Map</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 🔝 Navigation -->
   <header>
-    <h1>🍲Kitchen Map</h1>
-    <p>Search and discover new recipes</p>
+    <nav class="navbar">
+      <div class="logo">🍲 Kitchen Map</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#recipeList">Recipes</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+    </nav>
+    <p class="tagline">Search and discover delicious recipes 🍽️</p>
   </header>
 
+  <!-- 🔍 Search Box -->
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Type a dish name... e.g. chicken, pasta, cake">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Type a dish name... e.g. chicken, pasta, cake"
+    />
   </div>
 
+  <!-- 🔄 Loading -->
   <div id="loading" class="loading"></div>
+
+  <!-- 📜 Recipes -->
   <div class="recipes" id="recipeList"></div>
 
-  <!-- Favorites -->
+  <!-- ❤️ Favorites -->
   <section id="favorites">
     <div class="favorites-header">
       <h2>❤️ Your Favorite Recipes</h2>
@@ -28,13 +46,20 @@
     <div class="recipes" id="favoriteList"></div>
   </section>
 
-  <!-- Modal -->
+  <!-- 📦 Modal -->
   <div class="modal" id="recipeModal">
     <div class="modal-content">
       <span class="close-btn" id="closeModal">&times;</span>
       <div id="modalBody"></div>
     </div>
   </div>
-<script src="app.js"></script>
+
+  <!-- 👨‍🍳 About Section -->
+  <section id="about" class="about-section">
+    <h2>About Kitchen Map</h2>
+    <p>🍳 Kitchen Map is a simple recipe search tool where you can discover new dishes, save favorites, and learn how to cook them — all in one place!</p>
+  </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
